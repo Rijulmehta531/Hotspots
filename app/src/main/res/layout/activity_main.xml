@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background='#BB86C5'>
+
+
+    <TextView
+        android:id="@+id/textView_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="120dp"
+        android:text="Bar Name"
+        android:textSize='20dp'
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/testView_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
+        android:text="Address"
+        android:textSize='20dp'
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_bar" />
+
+    <EditText
+        android:id="@+id/bar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="172dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="110dp"
+        app:layout_constraintLeft_toRightOf="@id/textView_bar"
+        android:layout_marginLeft="10dp" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="228dp"
+        app:layout_constraintLeft_toRightOf="@id/testView_address"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/bar_name"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/textView_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="105dp"
+        android:layout_marginBottom="415dp"
+        android:text="Average Rating:"
+        android:textSize='20dp'
+        android:textStyle='bold'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/rating_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="329dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="415dp"
+        android:textSize='20dp'
+        app:layout_constraintLeft_toRightOf="@id/textView_rating"
+        android:layout_marginLeft="30dp"
+
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="330dp"
+        android:backgroundTint="@color/button_color"
+        android:text="rate the place"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle='bold'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:name="edu.rijul.hotspots.rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_rating" />
+    <Button
+        android:id="@+id/saveToDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="270dp"
+        android:text="Save My Data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/button_color"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle='bold'
+        />
+
+    <TextView
+        android:id="@+id/Heading_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please rate your bar"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="54dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fontFamily='cursive'
+        android:textSize='30dp'
+        android:layout_marginTop="20dp"
+        android:textColor='#3F51B5'
+        android:textStyle='bold'/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
